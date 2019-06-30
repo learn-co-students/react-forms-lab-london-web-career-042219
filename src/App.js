@@ -1,17 +1,18 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 import LoginForm from "./components/LoginForm";
 import TwitterMessage from "./components/TwitterMessage";
 
-class App extends Component {
+//Now that we know how to handle form elements in React and how to set up controlled components, it's time to put that knowledge to the test.
 
-  login = ({ username, password }) => {
+class App extends Component {
+  login = (username, password ) => { //this had additional curlies messing stuff up
+    //e.persist();
     console.log(`Logging in ${username} with password ${password}`);
   };
 
   render() {
     return (
       <div>
-
         <h1>
           <pre>LoginForm</pre>
         </h1>
@@ -21,12 +22,9 @@ class App extends Component {
           <pre>TwitterMessage</pre>
         </h1>
         <TwitterMessage maxChars={140} />
-
-
-
       </div>
-    )
+    );
   }
 }
 
-export default App
+export default App;
